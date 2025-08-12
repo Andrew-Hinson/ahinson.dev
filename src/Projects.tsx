@@ -11,7 +11,11 @@ type Project = {
 
   const internalProjects: Project[] = [
     { title: "Grafana - Slack reporting tool", description: "Fullstack app built with Go that enables users to publish Grafana dashboards as reports to Slack on a schedule" },
-    { title: "", description: "Another project description."}
+    { title: "Data Archival Tool", description: "Built a self service CLI tool that let teams move data between S3 storage tiers like Standard Infrequent Access and Glacier, helping the company cut over $70K per month in storage costs."},
+    { title: "Social Media Feed Data Pipeline", description: "Utilizing Go, Kafka, and AWS Lambda, this pipeline tackled fanout of social media posts to clients"},
+    { title: "Tableau Server Admin / Architect", description: "Scaled a failing single node EC2 server to multi node EC2 instances to handle increased workloads and protect against failures. Handled server upgrades over the years and adhoc support for Data Analysts."}
+
+
   ];
   
   type ProjectSectionProps = {
