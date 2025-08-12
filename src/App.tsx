@@ -5,7 +5,7 @@ import Footer from "./Footer";
 
 function App() {
   return (
-    <div className="font-sans">
+    <div className="font-sans min-h-screen bg-gray-100 text-gray-900">
       <Header />
       <Intro />
       <ProjectList />
