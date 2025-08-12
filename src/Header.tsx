@@ -1,6 +1,6 @@
 export default function Header() {
     return (
-      <header className="flex justify-between items-center p-6 max-w-4xl mx-auto">
+      <header className="py-4 sm:py-10 flex flex-row justify-between">
         <h1 className="font-bold bg-red-500 text-white p-4">Your Name</h1>        
         <nav>
           <ul className="flex gap-4">

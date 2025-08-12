@@ -11,7 +11,7 @@ type Project = {
   
   export default function ProjectList() {
     return (
-      <section id="projects" className="max-w-4xl mx-auto p-6">
+      <section id="projects" className="text-left w-full flex gap-4 flex-col mt-4 py-4 border-t-2 border-zinc-800 rounded-e-md">
         <h2 className="text-2xl font-bold mb-4">Projects</h2>
         <ul className="space-y-6">
           {projects.map((p, i) => (
