@@ -1,5 +1,6 @@
 import { GitHub, LinkedIn } from "./Icons";
 
+
 export default function Header() {
     return (
       <header className="py-4 sm:py-10 flex flex-row justify-between">

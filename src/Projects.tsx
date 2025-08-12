@@ -1,17 +1,17 @@
 type Project = {
     title: string;
     description: string;
-    link: string;
   };
   
   const activeProjects: Project[] = [
-    { title: "toc", description: "A short description of your project.", link: "#" },
-    { title: "Another Project", description: "Another project description.", link: "#" }
+    { title: "toc", description: "A customizable desktop chat and media app built in Go" },
+    { title: "ahinson.dev", description: "This website built with React, TypeScript, and TailwindCSS - utilizing Vite for development" },
+
   ];
 
   const internalProjects: Project[] = [
-    { title: "Grafana - Slack reporting tool", description: "A short description of your project.", link: "#" },
-    { title: "", description: "Another project description.", link: "#" }
+    { title: "Grafana - Slack reporting tool", description: "Fullstack app built with Go that enables users to publish Grafana dashboards as reports to Slack on a schedule" },
+    { title: "", description: "Another project description."}
   ];
   
   type ProjectSectionProps = {
@@ -30,10 +30,10 @@ function  ProjectSection({ id, title, items }: ProjectSectionProps){
       <ul className="space-y-6">
         {items.map((p, i) => (
           <li key={i}>
-            <a href={p.link} className="text-lg font-semibold hover:underline">
+            <span className="text-lg font-semibold hover:underline">
               {p.title}
-            </a>
-            <p>{p.description}</p>
+              <p className="italic">{p.description}</p>
+              </span>
           </li>
         ))}
       </ul>
@@ -44,7 +44,7 @@ function  ProjectSection({ id, title, items }: ProjectSectionProps){
 export default function ProjectList() {
     return (
       <>
-        <ProjectSection id="projects" title="Projects" items={activeProjects} />
+        <ProjectSection id="projects" title="Active Projects" items={activeProjects} />
         <ProjectSection id="internalProjects" title="Internal Projects" items={internalProjects} />
       </>
     );
