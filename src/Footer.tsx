@@ -1,7 +1,7 @@
 export default function Footer() {
     return (
-      <footer className="max-w-4xl mx-auto p-6 text-sm text-gray-500">
-        © {new Date().getFullYear()} Your Name
+      <footer className="text-left w-full flex gap-4 flex-col mt-4 py-4 border-t-2 border-zinc-800 rounded-e-md">
+        © {new Date().getFullYear()} Andrew Hinson
       </footer>
     );
   }

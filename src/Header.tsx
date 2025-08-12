@@ -1,11 +1,35 @@
+import { GitHub, LinkedIn } from "./Icons";
+
+
 export default function Header() {
     return (
-      <header className="flex justify-between items-center p-6 max-w-4xl mx-auto">
-        <h1 className="text-lg font-bold">Your Name</h1>
+      <header className="py-4 sm:py-10 flex flex-row justify-between">
+        <div className="flex flex-col">
+          <h1 className="font-bold text-xl p-0 m-0 ">Andrew Hinson</h1>
+          <span className="text-neutral-200 p-0 m-0">Software Engineer</span>        
+        </div>
         <nav>
           <ul className="flex gap-4">
-            <li><a href="#projects" className="hover:underline">Projects</a></li>
-            <li><a href="#contact" className="hover:underline">Contact</a></li>
+            <li>
+              <a 
+              href="https://github.com/Andrew-Hinson" 
+              className="hover:underline"
+              target="_blank"
+              rel="noopener noreferrer"
+              >
+              <GitHub/>
+              </a>
+            </li>
+            <li>
+              <a 
+              href="https://www.linkedin.com/in/andrew-hinson-a052189a/" 
+              className="hover:underline"              
+              target="_blank"
+              rel="noopener noreferrer"
+              >
+              <LinkedIn/>
+              </a>
+            </li>
           </ul>
         </nav>
       </header>
