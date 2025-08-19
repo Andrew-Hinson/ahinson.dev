@@ -51,8 +51,6 @@ export default function Career() {
               <div className="flex flex-col sm:hidden justify-start">
                 <div className="flex flex-row justify-start">
                   <h3 className="font-bold">{item.company}</h3>
-                  <span className="mx-2 font-bold">{item.title}</span>
-                  <span className="font-bold">{item.title}  </span>
                 </div>
                 <i>{item.title}</i>
                 <div>
