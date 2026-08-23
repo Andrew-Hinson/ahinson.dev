@@ -7,8 +7,8 @@ export const identity = {
 };
 
 export const links = {
-  email: "mailto:andrew.hinson@proton.me",
-  emailLabel: "andrew.hinson@proton.me",
+  email: "mailto:wahinsondev@gmail.com",
+  emailLabel: "wahinsondev@gmail.com",
   github: "https://github.com/Andrew-Hinson",
   linkedin: "https://www.linkedin.com/in/william-hinson-a052189a/",
   resume: "/andrew-hinson-resume.pdf",
