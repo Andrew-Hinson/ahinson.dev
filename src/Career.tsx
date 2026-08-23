@@ -1,66 +1,46 @@
-type CareerItem = {
-  company: React.ReactNode;
-  title: React.ReactNode;
-  product: React.ReactNode;
-  date: React.ReactNode;
-  description: React.ReactNode;
-};
-
-const careerItems: CareerItem[] = [
-  {
-    company: "Fetch -",
-    title: "Data Engineer",
-    product: "Streaming Data Platform",
-    date: "2021 - 2025",
-    description: "Kafka, Flink, Python, Go, Kubernetes, AWS, Terraform",
-  },
-  {
-    company: "The AME Group -",
-    title: "Service Technician",
-    product: "IT Field and Remote Support",
-    date: "2017 - 2019",
-    description: "Network and Desktop Support",
-  },
-  {
-    company: "U.S. Army -",
-    title: "Infantry",
-    product: "Louisiana National Guard",
-    date: "2012 - 2018",
-    description: "Specialist - Crew Served Weapons Squad",
-  },
-];
+import { career } from "./content";
 
 export default function Career() {
-    return (
-      <section className="text-left w-full flex gap-4 flex-col">
-        <h2 className="text-2xl font-bold mb-4">Career</h2>
-        {careerItems.map((item, index) => (
-          <div key={index}>
-            <div>
-              <div className="min-w-full flex row justify-between hidden sm:flex">
-                <div className="flex flex-row">
-                  <h3 className="font-bold">{item.company}</h3>
-                  <span className="mx-2 font-bold">{item.product}</span>
-                  <i className="mx-2">{item.title}  </i>
-                </div>
-                <div>
-                  <span>{item.date}</span>
-                </div>
+  return (
+    <section className="mt-10 border-t border-zinc-800 pt-8">
+      <h2 className="mb-6 text-lg font-semibold text-zinc-50">Career</h2>
+      <ol className="flex flex-col gap-6">
+        {career.map((entry) => (
+          <li key={entry.org}>
+            <div className="flex flex-col sm:flex-row sm:justify-between sm:gap-4">
+              <div>
+                <h3 className="font-semibold text-zinc-100">{entry.org}</h3>
+                {entry.context && (
+                  <p className="text-sm text-zinc-500">{entry.context}</p>
+                )}
               </div>
-              <span>{item.description}</span>
-              <div className="flex flex-col sm:hidden justify-start">
-                <div className="flex flex-row justify-start">
-                  <h3 className="font-bold">{item.company}</h3>
-                </div>
-                <i>{item.title}</i>
-                <div>
-                  <span>{item.date}</span>
-                </div>
-              </div>
+              {entry.dates && (
+                <span className="shrink-0 text-sm text-zinc-500">
+                  {entry.dates}
+                </span>
+              )}
             </div>
-          </div>
+            {entry.note && (
+              <p className="mt-1 text-zinc-400">{entry.note}</p>
+            )}
+            {entry.roles && (
+              <ul className="mt-2 flex flex-col gap-1">
+                {entry.roles.map((role) => (
+                  <li
+                    key={role.title}
+                    className="flex flex-col sm:flex-row sm:justify-between sm:gap-4"
+                  >
+                    <span className="text-zinc-300">{role.title}</span>
+                    <span className="shrink-0 text-sm text-zinc-500">
+                      {role.dates}
+                    </span>
+                  </li>
+                ))}
+              </ul>
+            )}
+          </li>
         ))}
-      </section>
-    );
-  }
-  
+      </ol>
+    </section>
+  );
+}
