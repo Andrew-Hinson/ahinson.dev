@@ -1,11 +1,3 @@
-# ahinson.dev
-
-
-
-## About
-
-This is my first React application - a personal portfolio website showcasing my career highlights and projects. Built as a learning experience to explore modern frontend development.
-
 ## Technologies Used
 
 <div align="center">
