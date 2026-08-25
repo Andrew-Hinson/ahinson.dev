@@ -10,7 +10,7 @@ export const links = {
   email: "mailto:wahinsondev@gmail.com",
   emailLabel: "wahinsondev@gmail.com",
   github: "https://github.com/Andrew-Hinson",
-  linkedin: "https://www.linkedin.com/in/william-hinson-a052189a/",
+  linkedin: "https://www.linkedin.com/in/william-a-hinson",
   resume: "/andrew-hinson-resume.pdf",
 };
 
