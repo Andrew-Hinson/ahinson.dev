@@ -43,7 +43,7 @@ export default function Header() {
           </ul>
         </nav>
       </div>
-      <p className="max-w-xl text-zinc-300">{identity.lede}</p>
+      <p className="text-zinc-300">{identity.lede}</p>
     </header>
   );
 }
