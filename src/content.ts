@@ -1,9 +1,9 @@
 export const identity = {
   name: "Andrew Hinson",
-  title: "Data Platform Engineer",
+  title: "Platform Engineer",
   signal: "Kafka · Terraform · Flink · AWS",
   lede:
-    "Built and operated Fetch's data platform; scaled Kafka for the 2025 Super Bowl launch; cut data-lake spend $70k/month.",
+    "Platform Engineer with 5+ years of experience designing durable, distributed systems across Kafka-based event streaming, Kubernetes-native infrastructure, and AWS cloud environments. Proven track record delivering high-throughput data pipelines, self-service platform tooling, and CI/CD automation for multi-tenant production systems. Works primarily in Go, Python, and Java, with a systems engineering mindset focused on reliability, observability, and self-service developer tooling.",
 };
 
 export const links = {
@@ -24,38 +24,18 @@ export const skills = [
   "Go",
 ] as const;
 
-export type Writeup = {
-  title: string;
-  problem: string;
-  built: string;
-  outcome: string;
-};
+export const writeupsContext =
+  "Fetch Rewards · Data Engineer, Data Platform · Jan 2023 - Aug 2025";
 
-export const writeups: Writeup[] = [
-  {
-    title: "Kafka for the Super Bowl launch",
-    problem:
-      "Fetch's 2025 Super Bowl ad would send millions of users through the streaming platform.",
-    built:
-      "I scaled Kafka connectors and topics ahead of the launch so the cluster could absorb that traffic.",
-    outcome: "The platform held through the ad.",
-  },
-  {
-    title: "S3 lake tiering",
-    problem:
-      "Data-lake objects sat in the wrong storage tier and the bill stayed high.",
-    built:
-      "I built an internal tool that let teams move data between Standard Infrequent Access and Glacier without a ticket.",
-    outcome: "Lake storage cost dropped $70k per month.",
-  },
-  {
-    title: "Terraform for Kafka Connect",
-    problem:
-      "Teams waited on platform to stand up Kafka Connect pipelines.",
-    built:
-      "I parameterized Terraform so a team could provision those pipelines themselves.",
-    outcome: "Teams stopped waiting on platform for Connect.",
-  },
+export const writeups: string[] = [
+  "Built and maintained FSD, the internal PaaS every service at Fetch shipped on: a Go GitOps engine where developers declared infrastructure in one YAML, and FSD provisioned any AWS service in use at Fetch and deployed to ECS or EKS.",
+  "Owned the Kafka Connect path in FSD, running connectors on Strimzi on EKS so teams could connect Kafka to data sources without a platform ticket, and scaled them to handle millions of concurrent users during the 2025 Super Bowl ad campaign.",
+  "Owned the Slack and Airflow integrations for an n8n LLM workflow that turned dbt, Airflow, and Snowflake run data into concise pipeline failure summaries for on-call.",
+  "Managed telemetry pipeline reliability and mapped data lineage into DataHub using Kubernetes, Helm, and AWS cloud environments enabling teams to cut spend by easily identifying unused assets.",
+  "Owned Kafka pipeline on-call, building Grafana alerting wired to PagerDuty for platform and analytics teams.",
+  "Reduced S3 and cloud infrastructure costs by $70k/month by building internal automation tools for storage lifecycle management.",
+  "Built Flink-on-Kafka pipelines tracking real-time user interactions and signups, delivering minute-level KPIs to senior stakeholders via InfluxDB and Grafana.",
+  "Built a Snowflake access-control pipeline that centralized permissions and enforced data governance for high-scale environments.",
 ];
 
 export type Role = {
@@ -76,15 +56,15 @@ export const career: CareerEntry[] = [
   {
     org: "Louisiana Blue",
     dates: "Jan 2026 - Present",
-    context: "Data Engineer",
-    note: "Develop and operate production data pipelines supporting health-plan operations.",
+    context: "Data Engineer, Data Platform",
+    note: "Rolled out Unity Catalog across 200+ tables for HIPAA-aligned row- and column-level access control, and tuned PySpark ETL on Databricks Workflows to cut compute spend 25%.",
   },
   {
     org: "Fetch Rewards",
-    dates: "Jun 2021 - Jul 2025",
+    dates: "Jun 2021 - Aug 2025",
     context: "Remote",
     roles: [
-      { title: "Data Platform Engineer", dates: "Jan 2023 - Jul 2025" },
+      { title: "Data Engineer, Data Platform", dates: "Jan 2023 - Aug 2025" },
       { title: "Data Engineer, Social Media Feed", dates: "Mar 2022 - Dec 2022" },
       { title: "Tableau Server Admin", dates: "Jun 2021 - Mar 2022" },
     ],
